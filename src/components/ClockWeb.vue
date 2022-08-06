@@ -44,8 +44,14 @@ export default {
 .container {
   display: flex;
   justify-content: center;
-  background-color: black;
-  color: white;
+  align-items: center;
+  background-color:#f7f7f7;
+  width: 100%;
+  height: 4rem;
+  padding: 10px;
+  box-shadow: 0 0.2rem 0.35rem 0 rgb(0 0 0 / 11%);
+  color: black;
+
 }
 .LCD {
   display: flex;

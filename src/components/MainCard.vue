@@ -4,54 +4,59 @@
         <div class="first-container">
             <div class="profile">
                 <img src = "../assets/dtee.jpg" alt="">
-                <h3> David Talson </h3>
-                <p> Software Developer </p>
+                <h1> David Talson </h1>
+                <h3> Software Developer </h3>
             </div>
             <div class = "social-links">
                     <div class = "link">
                         <a href = "https://github.com/dtee1" target="_blank" >
                             <font-awesome-icon icon="fa-brands fa-github" size="2x"/>
-                            <h2>Github</h2>
                         </a>
                     </div>
                     <div class = "link">
                         <a href = "https://ca.linkedin.com/in/david-talson-718834132" target="_blank">
                             <font-awesome-icon icon="fa-brands fa-linkedin" size="2x"/>
-                            <h2>LinkedIn</h2>
                         </a>
                     </div>
                     <div class = "link">
                         <a href = "https://g.dev/talsondavid" target="_blank">
                             <font-awesome-icon icon="fa-brands fa-google" size="2x"/>
-                            <h2>Google Dev</h2>
                         </a>
                     </div>
             </div>
             <div class = "button-container">
                 <div class = "link">
                     <a href = "">
-                            <font-awesome-icon icon="fa-brands fa-google" size="2x"/>
-                            <h2>Projects</h2>
-                    </a>
-                </div>
-                <div class = "link">
-                    <a href = "">
-                            <font-awesome-icon icon="fa-brands fa-google" size="2x"/>
+                            <font-awesome-icon icon="fa-brands fa-file" size="2x"/>
                             <h2>Resume</h2>
                     </a>
                 </div>
             </div> 
+            <div class = "interests">
+                <h2>Interests</h2>
+                <ul class="ul-interests">
+                    <li>Artificial Intelligence</li>
+                    <li>System Simulation </li>
+                    <li> Computer Aided Design </li>
+                </ul>
+            </div> 
         </div>
         <div class = "second-container">
             <div class = "about">
-                <h3> About  </h3>
+                <h1> About  </h1>
                 <p> I have a passion for designing, scaling, and maintaining software. I obtained an Electrical Engineering degree from Carleton University
 					where my co-op experience was hardware focused. After working in the idustry for some time, I decided to pursue a career in software engineering.
                     I am currently pursing a part time master's degree in Applied Artificial Intelligence at University of Ottawa. 
                 </p>
             </div>
+            <div class="education">
+                <h2> Education </h2>
+                <div class="school"><font-awesome-icon icon="fa-solid fa-graduation-cap" size="2x"/><div><p><b>Master of Engineering</b>, Concentration in Applied Artificial Intelligence</p><p><b>University of Ottawa</b>, 2022 - Present</p> </div></div>
+                <div class="school"><font-awesome-icon icon="fa-solid fa-graduation-cap" size="2x"/><div><p><b>Bachelor of Engineering</b>, Electrical Engineering</p><p><b>Carleton University</b>, 2015 - 2020</p> </div></div>
+
+            </div>
             <div class = "skills">
-                <h3> Skills & Technologies</h3>
+                <h2> Skills & Technologies</h2>
                 <div class="table">
                     <div class = "column">
                         <h3> Frontend </h3>
@@ -126,32 +131,55 @@ export default {
     .main-container {
         display: flex;
         flex-direction: row;
+        justify-content: center;
         background-color:white;
-        border-radius: 5%;
+        margin-top: 0.75%;
+        width: 80%;
     }
     .first-container{
         background-color: white;
         width: 25%;
         padding: 2.5%;
-        
     }
     .second-container {
         background-color:white;
         width: 75%;
-        padding: 2.5%;
+        padding-left: 2.5%;
+        padding-top: 0;
         margin: 2.5%;
+    }
+    .second-container h1 {
+        font-size: 3rem;
     }
     .second-container h3 {
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
+    .second-container p {
+        font-size: 1.25rem;
+    }
     .profile {
-        margin-bottom: 25%;
+        margin-bottom: 10%;
+    }
+    .profile h1 {
+        margin:0;
+        padding:0;
+    }
+    .profile h3 {
+        margin: 0;
+        padding: 0;
     }
     .profile img {
-        height: 7rem;
+        height: 15rem;
         border-radius: 50%;
+        box-shadow: 0 1rem 1rem 0 rgb(0 0 0 / 11%);
+    }
+    
+    .social-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
     .link a{
         text-decoration: none;
@@ -163,7 +191,7 @@ export default {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        background-color: royalblue;
+        background-color: #f7f7f7;
         margin: 0.75rem;
         border-radius: 10px;
         box-shadow: 0.2rem 0.2rem #888888;
@@ -171,10 +199,25 @@ export default {
     }
 
     .link a:hover {
-        background-color: white;
+        background-color: gray;
         transition: 0.3s;
     }
- 
+    .interests {
+        margin: 0;
+        padding: 0;
+        display: block;
+        align-items: flex-end;
+    }
+    .interests h2 {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 10%;
+    }
+    .ul-interests {
+        margin-top: -1.25rem;
+        padding-top: -1.25rem;
+        
+    }
     .about {
         text-align: left;
     }
@@ -184,6 +227,7 @@ export default {
         justify-content: center;
         align-items: center;
     }
+    
     .table {
         display: flex;
         flex-direction: row;
@@ -195,21 +239,45 @@ export default {
         width: 33%;
         height: auto;
     }
+    .education {
+        margin-top: 5%;
+    }
+    .education h2 {
+        text-align: left;
+        font-size: 2rem;
+        margin-top: -1.25rem;
+        padding-top: -1.25rem;
+    }
+    .education p {
+        text-align: left;
+        margin-top: -0.75rem;
+        padding-top: -0.8rem;
+    }
+    .school {
+        display: flex;
+        flex-direction: row;
+    }
+    .school div {
+        padding-left: 1%;
+        padding-bottom: 1.25rem;
+    }
     .skill {
         display: flex;
         flex-direction: row;
         justify-content: left;
         align-items: center;
     }
+    .skills h2 {
+        text-align: left;
+        font-size: 2rem;
+        padding-top: -1rem;
+        margin-top: -1rem;
+    }
     .skill p {
         padding-left: 0.5rem;
     }
     .logos img {
         height: 2rem;
-    }
-    .button-container{
-        margin-top: 25%; 
-       
     }
     .button-projects {
         background-color: blue;
@@ -222,7 +290,22 @@ export default {
         text-decoration: none;
         color: black;
     }
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 1140px) and (min-width: 800px) {
+        .profile img {
+            height: 10rem;
+        }
+    }
+    @media screen and (max-width: 800px){
+        .main-container {
+            display: block;
+        }
+        .first-container {
+            width: 100%;
+            padding: 2.5%;
+        }
+        .second-container {
+            width: 100%;
+        }
         .table {
             display: inline-block;
             justify-content: center;

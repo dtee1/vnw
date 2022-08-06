@@ -11,10 +11,12 @@ import { faVuejs} from '@fortawesome/free-brands-svg-icons'
 import { faPython} from '@fortawesome/free-brands-svg-icons'
 import { faJs} from '@fortawesome/free-brands-svg-icons'
 import { faBook} from '@fortawesome/free-solid-svg-icons'
+import { faFile} from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap} from '@fortawesome/free-solid-svg-icons'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-library.add(faGithub, faLinkedin, faGoogle, faHtml5, faCss3, faVuejs, faPython, faJs, faBook);
+library.add(faGithub, faLinkedin, faGoogle, faHtml5, faCss3, faVuejs, faPython, faJs, faBook, faFile, faGraduationCap);
 createApp(App)
 .component('font-awesome-icon', FontAwesomeIcon)
 .mount('#app')
